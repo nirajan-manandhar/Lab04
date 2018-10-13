@@ -16,9 +16,9 @@ public:
     bird(); //Default constructor
     bird(int, double, double, double); //Four parameter constructor
     bird(const bird& b) = default; //Copy constructor
-    ~bird() override;//Destructor
+    ~bird() = default;//Destructor
 
-    void move(double, double, double) override; //Overriding Move constructor
+    void move(double, double) override; //Overriding Move constructor
     void eat() override; //Overriding eat method
     void sleep() override; //Overriding sleep method
 

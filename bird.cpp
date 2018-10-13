@@ -11,10 +11,12 @@ bird::bird():animal(), z(0) {}
 //Four Parameter Constructor
 bird::bird(int age, double x, double y, double z) : animal(age, x, y), z(z) {}
 
+
+
 //Overridden move method
-void bird::move(double x, double y, double z)
+void bird::move(double x, double y)
 {
-    animal::move(x,y,z);
+    animal::move(x,y);
     this->z = z;
 }
 
@@ -31,7 +33,7 @@ void bird::eat() {
 //Overloaded insertion operator for bird
 ostream& operator<<(std::ostream& os, const bird& b)
 {
-    os << (animal) b << " Z: " << b.z;
+    os << b << " Z: " << b.z;
     return os;
 }
 

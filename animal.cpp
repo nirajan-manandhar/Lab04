@@ -5,6 +5,8 @@
 #include "animal.hpp"
 
 
+
+
 long animal::counter = 0;
 
 //Default Constructor
@@ -13,12 +15,14 @@ animal::animal() : alive(true), age(0), x(0), y(0) {
 }
 
 //Three parameter constructor
-animal::animal(int age, double x, double y) : alive(true), age(age), x(x), y(y) {
+animal::animal(int age, double x, double y) : id(counter++), alive(true), age(age), x(x), y(y) {
     id = counter++;
 }
 
+animal::animal(const animal &animal) : age(animal.age), id(counter++), alive(animal.alive), x(x), y(y) {}
+
 //Move method of an animal
-void animal::move(double x, double y, double z) {
+void animal::move(double x, double y) {
     this->x = x;
     this->y = y;
 }

@@ -11,21 +11,23 @@ class canine:public animal {
 public:
     canine();//Default constructor
     canine(int, double, double);//Three parameter constructor
+    canine(const canine& c) = default; //Copy constructor
+    ~canine() = default;//Destructor
 
     //Move method
-    void move(double, double);
+    void move(double, double) override;
 
     //Sleep method
-    void sleep();
+    void sleep() override;
 
     //Eat Method
-    void eat();
+    void eat() override;
 
     //Hunt method
     void hunt();
 
     //Overloaded insertion operator for canine
-    friend std::ostream& operator<<(std::ostream& ostream, const canine& c);
+    friend std::ostream& operator<<(std::ostream& os, const canine& c);
 
 
 

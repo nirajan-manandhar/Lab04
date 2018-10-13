@@ -4,11 +4,13 @@
 
 #include "canine.hpp"
 
+
 //Default constructor
 canine::canine():animal(){}
 
 //Three parameter constructor
 canine::canine(int age, double x, double y): animal(age, x, y){}
+
 
 //Move Method
 void canine::move(double x, double y) {
@@ -31,7 +33,7 @@ void canine::hunt() {
 
 //Overloaded insertion operator for bird
 std::ostream& operator<<(std::ostream& os, const canine& c) {
-    os << (animal) c;
+    os << c;
     return os;
 }
 

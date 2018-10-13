@@ -6,6 +6,7 @@
 #define LAB4_ANIMAL_HPP
 
 #include <iostream>
+#include <ostream>
 
 using namespace std;
 
@@ -21,11 +22,11 @@ public:
     static long counter;
     animal();   //Default constructor
     animal(int, double, double); //Three parameter constructor
-    animal(const animal& a) : age(age), id(id), alive(alive), x(x), y(y) {} //Copy constructor
+    animal(const animal& a); //Copy constructor
 
-    virtual void move(double, double, double = 0); //Moves the animals by changing coordinates.
+    virtual void move(double, double); //Moves the animals by changing coordinates.
 
-    virtual ~animal();//Destructor
+    virtual ~animal() = default;//Destructor
 
     virtual void sleep();
     virtual void eat();
