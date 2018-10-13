@@ -14,7 +14,7 @@ bird::bird(int age, double x, double y, double z) : animal(age, x, y), z(z) {}
 
 
 //Overridden move method
-void bird::move(double x, double y)
+void bird::move(double x, double y, double z)
 {
     animal::move(x,y);
     this->z = z;
@@ -33,7 +33,7 @@ void bird::eat() {
 //Overloaded insertion operator for bird
 ostream& operator<<(std::ostream& os, const bird& b)
 {
-    os << b << " Z: " << b.z;
+    os << dynamic_cast<const animal&>(b) << " Z: " << b.z;
     return os;
 }
 

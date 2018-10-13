@@ -28,8 +28,8 @@ public:
 
     virtual ~animal() = default;//Destructor
 
-    virtual void sleep();
-    virtual void eat();
+    virtual void sleep();//Sleep Mehod
+    virtual void eat();//Eat Method
 
     friend ostream& operator<<(ostream& os, const animal& dt);
 };
