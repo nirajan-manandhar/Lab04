@@ -25,13 +25,13 @@ void bird::sleep() {
 
 //Overridden eat method for bird
 void bird::eat() {
-    cout << "Peck Peck" << endl;
+    cout << "Bird Eating" << endl;
 }
 
 //Overloaded insertion operator for bird
 ostream& operator<<(std::ostream& os, const bird& b)
 {
-    os << "ID: " << b.id << " Age: " << b.age << " Alive: " << b.alive << " X: " << b.x << " Y: " << b.y << " Z: " << b.z;
+    os << (animal) b << " Z: " << b.z;
     return os;
 }
 

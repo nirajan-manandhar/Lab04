@@ -23,7 +23,7 @@ public:
     animal(int, double, double); //Three parameter constructor
     animal(const animal& a) : age(age), id(id), alive(alive), x(x), y(y) {} //Copy constructor
 
-    virtual void move(double, double, double); //Moves the animals by changing coordinates.
+    virtual void move(double, double, double = 0); //Moves the animals by changing coordinates.
 
     virtual ~animal();//Destructor
 
